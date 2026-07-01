@@ -1,0 +1,122 @@
+body {
+  background-color: rgb(141, 141, 168);
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+}
+.navigator {
+  background-color: rgb(44, 44, 42);
+  display: flex;
+  padding-inline: 12px;
+}
+.navigator ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin-left: auto;
+}
+.profile {
+    background-color: rgb(3, 32, 66);
+    border-radius: 50%;
+    padding: 4px;
+    transform: translatey(-4px);
+}
+.container {
+  background-color: rgb(34, 34, 34);
+  gap: 1rem;
+  display: flex;
+}
+aside {
+  min-width: 150px;
+  flex: 0;
+}
+.selected {
+  background-color: rgb(3, 32, 66);
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+.selected a {
+  text-decoration: none;
+}
+aside li {
+  padding-block: 4px;
+}
+.noData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(71, 65, 60);
+  width: 100%;
+}
+.headline ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.headline li {
+  flex: 1 0 auto;
+}
+.headline li:nth-child(2) {
+  margin-right: 980px;
+}
+.box {
+  background-color: rgb(44, 44, 42);
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.heading h4 {
+  margin: 5px;
+}
+.links {
+  display: flex;
+  padding: 0px;
+  margin: 0;
+  font-size: 0.9em;
+  gap: 2rem;
+}
+.line {
+  border: 1px solid rgb(56, 56, 54);
+}
+form {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: rgb(118, 116, 111);
+}
+.bigbox {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-block: 15px;
+}
+.box {
+  flex: 0 1 auto;
+}
+.animate, .animate1 {
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(44, 44, 42);
+    padding-block: 17px;
+}
+.animate1 {
+    padding-block: 170px;
+}
+.animate>h3, .animate1>h1 {
+  color: #ffffff;
+  transform: translateX(0);
+  /* Defines what property changes and how long it takes */
+  transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+ .animate>h3:hover, .animate1>h1:hover {
+  color: #ff4757;
+  transform: translateX(15px); /* Moves 10px to the right */
+}
