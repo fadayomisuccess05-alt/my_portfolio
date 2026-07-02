@@ -1,6 +1,6 @@
 body {
   background-color: rgb(141, 141, 168);
-  width: 100%;
+  min-width: 100%;
   height: 100vh;
   margin: 0;
   color: #fff;
@@ -17,10 +17,10 @@ body {
   margin-left: auto;
 }
 .profile {
-    background-color: rgb(3, 32, 66);
-    border-radius: 50%;
-    padding: 4px;
-    transform: translatey(-4px);
+  background-color: rgb(3, 32, 66);
+  border-radius: 50%;
+  padding: 4px;
+  transform: translatey(-4px);
 }
 .container {
   background-color: rgb(34, 34, 34);
@@ -98,25 +98,84 @@ form {
 .box {
   flex: 0 1 auto;
 }
-.animate, .animate1 {
-    max-width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(44, 44, 42);
-    padding-block: 17px;
+.animate,
+.animate1 {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(44, 44, 42);
+  padding-block: 17px;
 }
 .animate1 {
-    padding-block: 170px;
+  padding-block: 170px;
 }
-.animate>h3, .animate1>h1 {
+.animate > h3,
+.animate1 > h1 {
   color: #ffffff;
   transform: translateX(0);
   /* Defines what property changes and how long it takes */
-  transition: transform 0.3s ease, color 0.3s ease; 
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
- .animate>h3:hover, .animate1>h1:hover {
+.animate > h3:hover,
+.animate1 > h1:hover {
   color: #ff4757;
   transform: translateX(15px); /* Moves 10px to the right */
+}
+
+@media screen and (max-width: 500px) {
+  aside {
+    min-width: 100px;
+    font-size: 0.9rem;
+  }
+  footer {
+    font-size: 0.75em;
+    text-align: center;
+  }
+  .noData {
+    width: 100%;
+  }
+  .navigator {
+    background-color: rgb(44, 44, 42);
+    display: flex;
+    flex-direction: column;
+  }
+  .navigator ul {
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    margin-left: 0;
+    padding-inline: auto;
+  }
+  .nav1 {
+    margin: 0px;
+    padding-inline: 0px;
+  }
+  .nav2 {
+    transform: translate(135px, -55px);
+    margin: 0;
+  }
+  .bigbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    min-width: 230px;
+  }
+  .headline {
+    min-width: 300px;
+    font-size: 0.9rem;
+  }
+  .headline ul {
+    padding: 0;
+    margin-right: 40px;
+  }
+  .headline li:nth-child(2) {
+    margin-right: 0px;
+  }
 }
